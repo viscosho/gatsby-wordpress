@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -9,12 +10,16 @@ const Tour = props => {
       wpgraphql: { tour },
     },
   } = props
-  const { title, content } = tour
+  const { title, content, featuredImage } = tour
 
   return (
     <Layout>
       <SEO title={title} />
       <h1>{title}</h1>
+      { featuredImage && <img
+        src={featuredImage.link}
+        alt={title}
+      />}
       <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </Layout>
   )
@@ -31,6 +36,9 @@ export const pageQuery = graphql`
         content
         uri
         tourId
+        featuredImage {
+          link
+        }
       }
     }
   }
