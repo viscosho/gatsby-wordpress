@@ -35,7 +35,7 @@ const CommentForm = () => {
   }
   const [values, setValues] = useState(defaultValues)
   const [commentStatus, setCommentStatus] = useState(false)
-  const [addComment, { data }] = useMutation(ADD_COMMENT, {
+  const [addComment] = useMutation(ADD_COMMENT, {
     onCompleted() {
       setCommentStatus(`success`)
       setValues(defaultValues)

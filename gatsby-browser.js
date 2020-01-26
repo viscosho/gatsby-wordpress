@@ -5,7 +5,7 @@
  */
 
 import React from "react"
-import { ApollloProvider, ApolloProvider } from "@apollo/react-hooks"
+import { ApolloProvider } from "@apollo/react-hooks"
 import ApolloClient from "apollo-boost"
 
 export const wrapRootElement = ({ element }) => {
