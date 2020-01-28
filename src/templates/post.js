@@ -55,10 +55,10 @@ const Post = props => {
         </li>
       </ul>
       <div dangerouslySetInnerHTML={{ __html: content }}></div>
-      <CommentProvider value={commentData}>
+      {/* <CommentProvider value={commentData}>
         <Comments post={post} />
         {!commentData.commentId && <CommentForm />}
-      </CommentProvider>
+      </CommentProvider> */}
     </Layout>
   )
 }
