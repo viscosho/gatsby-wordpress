@@ -20,10 +20,12 @@ const Posts = props => {
       <div className="grid grid-cols-3 gap-4">
         {posts.nodes.map(post => (
           <div>
-            <img src={post.featuredImage.link} alt={post.title} />
-            <h2 className="text-2xl mb-6" key={post.id}>
-              <Link to={post.slug}>{post.title}</Link>
-            </h2>
+            <Link to={post.slug}>
+              <img src={post.featuredImage.link} alt={post.title} />
+              <h2 className="text-2xl mb-6" key={post.id}>
+                {post.title}
+              </h2>
+            </Link>
           </div>
         ))}
       </div>

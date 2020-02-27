@@ -20,10 +20,12 @@ const Tours = props => {
       <div className="grid grid-cols-3 gap-4">
       {tours.nodes.map(tour => (
           <div>
-            {tour.featuredImage && <img src={tour.featuredImage.link} alt={tour.title} /> }
-            <h2 className="text-2xl mb-6" key={tour.id}>
-              <Link to={`/tour/${tour.slug}`}>{tour.title}</Link>
-            </h2>
+            <Link to={`/tour/${tour.slug}`}>
+              {tour.featuredImage && <img src={tour.featuredImage.link} alt={tour.title} /> }
+              <h2 className="text-2xl mb-6" key={tour.id}>
+                {tour.title}
+              </h2>
+            </Link>
           </div>
       ))}
       </div>
