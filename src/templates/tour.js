@@ -14,7 +14,7 @@ const Tour = props => {
   return (
     <Layout>
       <SEO title={title} />
-      <h1>{title}</h1>
+      <h1 className="text-2xl">{title}</h1>
       { featuredImage && <img
         src={featuredImage.link}
         alt={title}

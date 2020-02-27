@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Tour Operators `,
+    description: `Navigate this site to explore the features offered by the Tour Operators Plugin`,
+    author: `Virginia Garcia`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,6 +24,15 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: "gatsby-wpgraphql-inline-images",
+      options: {
+        wordPressUrl: `https://to-demo.lsdev.biz`,
+        uploadsUrl: `https://to-demo.lsdev.biz/wp-content/uploads/`,
+        processPostTypes: ['Page', 'Post', 'tour'],
+        graphqlTypeName: "WPGraphQL",
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -37,12 +46,6 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sass`,
-      // options: {
-      //   postCssPlugins: [
-      //     require("tailwindcss"),
-      //     require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
-      //   ],
-      // },
       options: {
         // Configure SASS to process Tailwind
         postCssPlugins: [require('tailwindcss')],

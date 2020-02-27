@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
     id="header"
     className="text-gray-900 leading-normal mb-6"
     style={{
-      background: `rebeccapurple`,
+      background: `#374650`,
     }}
   >
     <div

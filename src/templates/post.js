@@ -85,6 +85,11 @@ export const pageQuery = graphql`
     wpgraphql {
       post(id: $id) {
         title
+        featuredImage {
+          sourceUrl
+          altText
+          title(format: RENDERED)
+        }
         content
         uri
         postId
