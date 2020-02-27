@@ -21,7 +21,7 @@ const Posts = props => {
         {posts.nodes.map(post => (
           <div>
             <Link to={post.slug}>
-              <img src={post.featuredImage.link} alt={post.title} />
+              {post.featuredImage && <img src={post.featuredImage.link} alt={post.title} /> }
               <h2 className="text-2xl mb-6" key={post.id}>
                 {post.title}
               </h2>
