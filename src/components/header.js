@@ -5,30 +5,33 @@ import MainMenu from "./mainMenu"
 
 const Header = ({ siteTitle }) => (
   <header
+    id="header"
+    className="text-gray-900 leading-normal mb-6"
     style={{
       background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
     }}
   >
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+      className="p-6 max-w-screen-lg mx-auto"
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+      <div
+        className="w-full max-w-screen-xl relative mx-auto px-6"
+      >
+        <h1
+          className="text-4xl flex items-center -mx-6"
         >
-          {siteTitle}
-        </Link>
-      </h1>
-      <MainMenu />
+          <Link
+            to="/"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            {siteTitle}
+          </Link>
+        </h1>
+        <MainMenu />
+      </div>
     </div>
   </header>
 )

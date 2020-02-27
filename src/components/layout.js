@@ -12,6 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "../styles/layout.css"
 import "../styles/styles.css"
+//Tailwind
+import '../css/global.scss'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,6 +30,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
+        className="container"
         style={{
           margin: `0 auto`,
           maxWidth: 960,

@@ -52,7 +52,7 @@ const MainMenu = props => {
         },
       }) => {
         return (
-          <nav className="main-menu">
+          <nav className="main-menu flex items-center -mx-6">
             <ul>{menu.map(item => renderMenuItem(item))}</ul>
           </nav>
         )
